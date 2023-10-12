@@ -107,7 +107,7 @@ Assuming something similar to the [Page Embedded Permission Control proposal][6]
                      input notes into the Amazing MusicSite Sequencer">
 ```
 
-### Generic Enumerations rather than arbitrary prose?
+### Generic Enumerations rather than/in addition to arbitrary prose?
 
 The examples and mock above all assume that developers would provide arbitrary text. This, of course, is dangerous, as we've generally assumed that any text developers can put into trusted surfaces will be abused (see [the beforeunload event handler][7], for example). If we can find a reasonable way to help users understand that the message is being passed through from the site, the benefits might outweigh the risks, but this will require some research and probably clever UX approaches beyond the mock above. It seems likely that such an explanation is possible, or that [browsers could learn to make good decisions][8] about when text could be useful or abusive, but let's assume for a moment that it's not. If we can't have strings, are there other options?
 
@@ -117,7 +117,7 @@ Two come to mind:
 
 2. We can achieve a substantial portion of the more generalized data usage practices by going even higher-level, shifting from the specifics of a capability to the general purposes to which capabilities are put. [Other][9] [platforms][10] have paved the way here to some extent, specifying a set of generic purposes that could be applied to a variety of data types ("advertising", "analytics", "app functionality", etc). These might lend themselves to a "nutrition label" kind of approach that shifts away from a detailed description of purpose to something that might lend itself to iconography while still being meaningful.
 
-Enumerations, particularly the high-level kind in #2 above, seem worth exploring even if we do decide that strings are defensible. It might be ideal to support both, with enumerations providing somewhat-standardized insights, and a string providing more details into how those high-level purposes apply to this application in particular. This could give the user agent more flexibility regarding the way it renders data, perhaps initially providing only a "nutrition label" rendering of the enumeration, and allowing the user to dig into additional site-provided information (strings or entire privacy policies) if they choose.
+Enumerations, particularly the high-level kind in #2 above, seem worth exploring even if we do decide that strings are defensible. **It might be ideal to support both, with enumerations providing somewhat-standardized insights, and a string providing more details into how those high-level purposes apply to this application in particular.** This could give the user agent more flexibility regarding the way it renders data, perhaps initially providing only a "nutrition label" rendering of the enumeration, and allowing the user to dig into additional site-provided information (strings or entire privacy policies) if they choose.
 
 <img src="./image1.png"
      alt="The same permission prompt from above, but with additional context reading: 'Data usage. musicsite.example claims that: 1. No data about MIDI devices is shared with other companies or organizations. 2. Data about MIDI devices is collected for the purposes of analytics and core application functionality.'"
